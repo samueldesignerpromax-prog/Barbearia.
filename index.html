@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Estilo - Agendamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✂️ Barbearia Estilo</h1>
+            <p>Agende seu horário de forma simples e rápida</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Seção de Serviços e Preços -->
+            <div class="services-section">
+                <h2>Nossos Serviços</h2>
+                <div class="services-list">
+                    <div class="service-item">
+                        <span>💈 Corte de Cabelo</span>
+                        <span class="price">R$ 40,00</span>
+                    </div>
+                    <div class="service-item">
+                        <span>🧔 Barba</span>
+                        <span class="price">R$ 30,00</span>
+                    </div>
+                    <div class="service-item">
+                        <span>⚡ Corte + Barba</span>
+                        <span class="price">R$ 60,00</span>
+                    </div>
+                    <div class="service-item">
+                        <span>✨ Pigmentação</span>
+                        <span class="price">R$ 50,00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulário de Agendamento -->
+            <div class="booking-section">
+                <h2>📅 Agende seu Horário</h2>
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label>Nome Completo:</label>
+                        <input type="text" id="nome" required placeholder="Digite seu nome">
+                    </div>
+
+                    <div class="form-group">
+                        <label>E-mail:</label>
+                        <input type="email" id="email" required placeholder="seu@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Telefone:</label>
+                        <input type="tel" id="telefone" required placeholder="(11) 99999-9999">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Serviço:</label>
+                        <select id="servico" required>
+                            <option value="">Selecione...</option>
+                            <option value="Corte de Cabelo - R$40">Corte de Cabelo - R$ 40,00</option>
+                            <option value="Barba - R$30">Barba - R$ 30,00</option>
+                            <option value="Corte + Barba - R$60">Corte + Barba - R$ 60,00</option>
+                            <option value="Pigmentação - R$50">Pigmentação - R$ 50,00</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Data:</label>
+                        <input type="date" id="data" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Horário:</label>
+                        <select id="horario" required>
+                            <option value="">Selecione um horário</option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-agendar">✓ Agendar Agora</button>
+                </form>
+                <div id="mensagem" class="mensagem"></div>
+            </div>
+
+            <!-- Lista de Agendamentos -->
+            <div class="appointments-section">
+                <h2>📋 Meus Agendamentos</h2>
+                <div id="listaAgendamentos" class="appointments-list">
+                    <p style="text-align: center; color: #999;">Nenhum agendamento realizado</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>📍 Rua Exemplo, 123 - Centro | 📞 (11) 99999-9999</p>
+            <p>⏰ Segunda a Sexta: 09h às 19h | Sábado: 09h às 17h</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
